@@ -1,0 +1,41 @@
+.header {
+  outline: 1px solid red;
+
+  nav {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.header__logo {
+  width: 101px;
+  height: 84px;
+  outline: 1px solid green;
+}
+
+.header__nav {
+  order: -1;
+  width: 100%;
+  outline: 2px solid green;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.header__toggle {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+
+  width: 22px;
+  height: 22px;
+  border: none;
+
+  background-color: transparent;
+
+  outline: 2px solid green;
+}
