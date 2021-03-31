@@ -1,0 +1,70 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px;
+  border: none;
+  border-top: 1px solid @grey-two;
+}
+
+.form__legend {
+  width: 100%;
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form__label-text {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  &--radio,
+  &--checkbox {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: none;
+  }
+}
+
+.form__input-text,
+.form__textarea {
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  padding: 15px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+  background-color: @grey-three;
+}
+
+.form__textarea {
+  min-height: 160px;
+  font-family: inherit;
+}
+
+.form__button-submit {
+  width: calc(100% - 2 * 20px); // Наверняка есть способ попроще
+  margin: 50px 20px;
+  padding: 15px;
+  border: none;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: @white;
+  text-align: center;
+
+  background-color: @pale-blue;
+}
