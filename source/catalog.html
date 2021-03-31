@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - Фото и видео</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
   </head>
   <body class="page__body">
 
@@ -12,7 +14,9 @@
         <a class="header__logo" href="index.html">
           <img class="header__logo-img" src="https://via.placeholder.com/100x84" alt="Sedona">
         </a>
-        <button class="header__toggle">Открыть/закрыть меню</button>
+        <button class="header__toggle">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
         <ul class="header__nav nav">
           <li class="nav__item">
             <a href="index.html">Главная</a>
