@@ -1,0 +1,36 @@
+.reason {
+  padding: 40px 14px;
+  border: 1px dashed blue;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--imaged {
+    background-color: @pale-blue;
+    color: @white;
+  }
+}
+
+.reason__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+  &::after {
+    margin-top: 10px;
+    display: block;
+    counter-increment: reasons;
+    content: "— №" counter(reasons) " —";
+
+    font-size: 14px; // Макет неоднозначно говорит какой размер шрифта(
+    line-height: 26px;
+  }
+}
+
+.reason__text {
+  font-size: 14px; // Макет неоднозначно говорит какой размер шрифта(
+  line-height: 26px;
+}
+
+.reason__photo {
+  margin: 0 -14px;
+}
