@@ -12,4 +12,19 @@
 
   list-style: none;
   counter-reset: reasons;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.reasons__list-item {
+  @media (min-width: @tablet-width) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
 }
