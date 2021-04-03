@@ -14,6 +14,10 @@
   width: 101px;
   height: 84px;
   outline: 1px solid green;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
 }
 
 .header__nav {
@@ -23,6 +27,14 @@
 
   &--closed {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+
+    &--closed {
+      display: grid;
+    }
   }
 }
 
@@ -38,4 +50,8 @@
   background-color: transparent;
 
   outline: 2px solid green;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
