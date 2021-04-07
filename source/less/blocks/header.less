@@ -10,10 +10,24 @@
   }
 }
 
+.header--no-js {
+  .header__toggle {
+    display: none;
+  }
+
+  .header__nav--closed {
+    display: block;
+  }
+}
+
 .header__logo {
   width: 101px;
   height: 84px;
   outline: 1px solid green;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
 }
 
 .header__nav {
@@ -23,6 +37,14 @@
 
   &--closed {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+
+    &--closed {
+      display: grid;
+    }
   }
 }
 
@@ -38,4 +60,14 @@
   background-color: transparent;
 
   outline: 2px solid green;
+  cursor: pointer;
+
+  // временно
+  &:hover {
+    background-color: rgba(0, 0, 100, 0.5);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

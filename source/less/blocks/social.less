@@ -1,8 +1,13 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0 15px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    max-width: calc(100% / 3);
+  }
 }
 
 .social__item {

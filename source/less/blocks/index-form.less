@@ -11,11 +11,22 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    width: 435px;
+    margin: 0 auto 30px;
+    font-size: 30px;
+  }
 }
 
 .index-form__text {
   font-size: 14px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 435px;
+    margin: 0 auto 40px;
+  }
 }
 
 .index-form__link {
@@ -28,4 +39,9 @@
   background-color: @pale-blue;
   border: none;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 458px;
+  }
 }

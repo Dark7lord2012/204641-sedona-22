@@ -1,11 +1,17 @@
 .promo {
   padding-top: 300px; // картинка сверху по макету
+  padding-bottom: 11px;
   outline: 1px solid red;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 50px;
+  }
 }
 
 .promo__slogan {
   margin: 32px 0 20px; // временно
   padding: 0 10px; // Понять бы какой отступ по всей ширине у макета
+
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -13,10 +19,24 @@
   text-transform: uppercase;
 
   outline: green;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 520px;
+    font-size: 21px;
+  }
 }
 
 .promo__text {
+  margin-bottom: 0;
   padding: 0 15px; // !
+
   font-size: 14px;
   line-height: 26px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 520px;
+    margin: 26px auto 0;
+  }
 }

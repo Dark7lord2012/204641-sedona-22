@@ -1,16 +1,61 @@
 .reason {
   padding: 40px 14px;
-  border: 1px dashed blue;
+  box-sizing: border-box;
   text-align: center;
   text-transform: uppercase;
 
   &--imaged {
+    padding-bottom: 0;
     background-color: @pale-blue;
     color: @white;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 32px;
+
+    &--imaged {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      padding: 0;
+
+      .reason__sublist {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+
+      &-right {
+        .reason__photo {
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
+
+      &-left {
+        .reason__photo {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+      }
+    }
+  }
+}
+
+.reason__inner {
+  @media (min-width: @tablet-width) {
+    min-width: 256px;
+    box-sizing: border-box;
+    padding: 40px 32px;
+    outline: 1px dotted red;
+    outline-offset: -2px;
   }
 }
 
 .reason__title {
+  margin-top: 0;
+
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -27,10 +72,21 @@
 }
 
 .reason__text {
-  font-size: 14px; // Макет неоднозначно говорит какой размер шрифта(
+  margin-bottom: 0;
+
+  font-size: 14px;
   line-height: 26px;
 }
 
 .reason__photo {
+  display: block;
   margin: 0 -14px;
+  width: 320px;
+  height: 260px;
+  outline: 1px solid red;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 100%;
+  }
 }

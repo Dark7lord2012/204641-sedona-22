@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Седона - Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
-    <header class="header">
+    <header class="header header--no-js">
       <nav>
         <a class="header__logo">
           <img class="header__logo-img" src="https://via.placeholder.com/100x84" alt="Sedona">
@@ -17,7 +17,7 @@
         <button class="header__toggle">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
-        <ul class="header__nav header__nav--close d nav">
+        <ul class="header__nav header__nav--closed nav">
           <li class="nav__item">
             <a>Главная</a>
           </li>
@@ -52,16 +52,20 @@
         <h2 class="visually-hidden">Причины ехать</h2>
 
         <ol class="reasons__list">
-          <li class="reasons__list-item reason reason--imaged">
-            <h3 class="reason__title">Настоящий городок</h3>
-            <p class="reason__text">
-              Седона не аттракцион для туристов, там течет своя жизнь
-            </p>
+          <li class="reasons__list-item reason reason--imaged reason--imaged-right">
+            <div class="reason__inner">
+              <h3 class="reason__title">Настоящий городок</h3>
+              <p class="reason__text">
+                Седона не аттракцион для туристов, там течет своя жизнь
+              </p>
+            </div>
 
+            <!-- <img  class="reason__photo"
+              src="https://via.placeholder.com/320x260" alt="Дом в Седоне"> -->
             <img  class="reason__photo"
-              src="https://via.placeholder.com/320x260" alt="Дом в Седоне">
+              src="img/example.jpg" width="320" height="260" alt="Дом в Седоне">
 
-            <ul class="reasons__sublist subreasons">
+            <ul class="reasons__sublist reason__sublist subreasons">
               <li class="subreasons__item">
                 <h4 class="subreasons__title">Жилье</h4>
                 <p class="subreasons__text">
@@ -83,13 +87,19 @@
             </ul>
 
           </li>
-          <li class="reasons__list-item reason reason--imaged">
-            <h3 class="reason__title">Там мост дъявола</h3>
-            <p class="reason__text">
-              Да, по нему можно пройти! Если вы осмелитесь, конечно
-            </p>
+          <li class="reasons__list-item reason reason--imaged reason--imaged-left">
+            <div class="reason__inner">
+              <h3 class="reason__title">Там мост дъявола</h3>
+              <p class="reason__text">
+                Да, по нему можно пройти! Если вы осмелитесь, конечно
+              </p>
+            </div>
+            <!-- <img  class="reason__photo"
+              src="https://via.placeholder.com/320x260"
+              alt="Песчаная гора в виде моста - Мост Дьявола"> -->
             <img  class="reason__photo"
-              src="https://via.placeholder.com/320x260" alt="Песчаная гора в виде моста - Мост Дьявола">
+              src="img/example.jpg"
+              alt="Песчаная гора в виде моста - Мост Дьявола">
           </li>
           <li class="reasons__list-item reason">
             <h3 class="reason__title">Небольшая площадь</h3>
@@ -150,5 +160,6 @@
       </p>
     </footer>
 
+    <script src="js/scripts.js"></script>
   </body>
 </html>
