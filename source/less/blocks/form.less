@@ -24,17 +24,6 @@
   margin: 0;
   border-top: 1px solid @grey-two;
 
-  &--contacts {
-    .form__label {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .form__label-text {
-      margin-left: 20px;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     width: 100%;
     border-top: none;
@@ -42,6 +31,39 @@
     padding: 0;
     // outline: 1px dashed rgba(0, 0, 0, 0.5);
     // outline-offset: -3px;
+  }
+}
+
+.form__fieldset--contacts {
+  .form__label {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__label-text {
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form__legend {
+      width: 100%;
+    }
+
+    .form__label {
+      flex-wrap: nowrap;
+    }
+
+    .form__label + .form__label {
+      margin-top: 0;
+    }
+
+    .form__label-text {
+      white-space: nowrap;
+    }
   }
 }
 
@@ -57,6 +79,12 @@
       &::after {
         display: none;
       }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .form__legend {
+      justify-content: center;
     }
   }
 }
@@ -85,12 +113,16 @@
 
     .form__legend {
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: -1;
     }
 
     .form__label + .form__label {
       margin-top: 0;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
