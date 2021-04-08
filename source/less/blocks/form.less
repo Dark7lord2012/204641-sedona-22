@@ -6,14 +6,27 @@
 .form__fieldset {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   padding: 20px 20px 30px;
   border: none;
   border-top: 1px solid @grey-two;
+
+  &--contacts {
+    .form__label {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .form__label-text {
+      margin-left: 20px;
+    }
+  }
 }
 
 .form__legend {
   width: 100%;
   margin-top: 0;
+
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -21,13 +34,28 @@
   text-align: center;
 }
 
+.form__label {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  outline: 1px solid blue;
+}
+
+.form__label + .form__label {
+  margin-top: 20px;
+}
+
 .form__label-text {
+  flex-grow: 1;
+  margin-right: 10px;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
 
   &--radio,
   &--checkbox {
+    margin-left: 30px;
+
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
@@ -37,7 +65,7 @@
 
 .form__input-text,
 .form__textarea {
-  display: inline-block;
+  width: 100%;
   box-sizing: border-box;
   border: none;
   padding: 15px;
@@ -56,7 +84,7 @@
 
 .form__button-submit {
   width: calc(100% - 2 * 20px); // Наверняка есть способ попроще
-  margin: 50px 20px;
+  margin: 30px 20px 50px;
   padding: 15px;
   border: none;
 
