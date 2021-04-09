@@ -1,33 +1,187 @@
-.form {
+// .form {
+//   // Форме на flex чихать(
+//   // Особенно когда порядок надо менять
+// }
+
+.form__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
 }
 
 .form__fieldset {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   padding: 20px 20px 30px;
   border: none;
+  margin: 0;
   border-top: 1px solid @grey-two;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    border-top: none;
+    margin-top: 50px;
+    padding: 0;
+    // outline: 1px dashed rgba(0, 0, 0, 0.5);
+    // outline-offset: -3px;
+  }
+}
+
+.form__fieldset--contacts {
+  .form__label {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__label-text {
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form__legend {
+      width: 100%;
+    }
+
+    .form__label {
+      flex-wrap: nowrap;
+    }
+
+    .form__label + .form__label {
+      margin-top: 0;
+    }
+
+    .form__label-text {
+      white-space: nowrap;
+    }
+  }
+}
+
+.form__fieldset--impressions {
+  @media (min-width: @tablet-width) {
+    order: -2;
+    width: 50%;
+    padding-right: 30px;
+    border-right: 1px solid @grey-four;
+
+    .form__legend {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .form__legend {
+      justify-content: center;
+    }
+  }
+}
+
+.form__fieldset--fio {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    padding-left: 30px;
+
+    .form__legend {
+      text-align: left;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.form__fieldset--showplaces {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    .form__legend {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+
+    .form__label + .form__label {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .form__legend {
   width: 100%;
   margin-top: 0;
+
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      height: 1px;
+      flex-grow: 1;
+      background-color: @grey-four;
+      content: "";
+    }
+
+    &::before {
+      margin-right: 30px;
+    }
+
+    &::after {
+      margin-left: 30px;
+    }
+  }
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  outline: 1px solid blue;
+}
+
+.form__label + .form__label {
+  margin-top: 20px;
 }
 
 .form__label-text {
+  flex-grow: 1;
+  margin-right: 10px;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
 
   &--radio,
   &--checkbox {
+    margin-left: 30px;
+
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
@@ -37,7 +191,7 @@
 
 .form__input-text,
 .form__textarea {
-  display: inline-block;
+  width: 100%;
   box-sizing: border-box;
   border: none;
   padding: 15px;
@@ -56,7 +210,7 @@
 
 .form__button-submit {
   width: calc(100% - 2 * 20px); // Наверняка есть способ попроще
-  margin: 50px 20px;
+  margin: 30px 20px 50px;
   padding: 15px;
   border: none;
 
@@ -67,4 +221,26 @@
   text-align: center;
 
   background-color: @pale-blue;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin: 50px 0;
+    width: 50%;
+  }
+}
+
+.form__note {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin: 50px 0;
+    width: 50%;
+
+    font-size: 14px;
+    line-height: 26px;
+    align-self: center;
+    text-align: right;
+    text-transform: uppercase;
+  }
 }
