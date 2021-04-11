@@ -2,11 +2,74 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid @grey-two;
+  border-top: 1px solid @grey-two;
+
+
+  @media (min-width: @tablet-width) {
+    background-color: @grey-three;
+    padding: 0;
+    border-top: none;
+
+    .photo__inner {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+    }
+
+    &--big {
+      grid-column-start: 1;
+      grid-column-end: -1;
+
+      .photo__img {
+        height: 400px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.photo__inner {
+  @media (min-width: @tablet-width) {
+    padding: 11px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // Спорное решение для переполнения?
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 125px;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    color: @white;
+    background-color: rgba(@black, 0.3);
+  }
 }
 
 .photo__link {
   order: -1;
+  display: block;
+  outline: 1px solid red;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.photo__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    height: 267px;
+  }
 }
 
 .photo__title {
@@ -14,16 +77,38 @@
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 10px;
+  }
 }
 
 .photo__author {
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .photo__likes {
+  margin: 0;
   padding-left: 30px; //временно
+
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    align-self: center;
+
+    text-align: right;
+  }
 }
