@@ -8,4 +8,5 @@ header.classList.remove('header--no-js');
 
 headerToggle.addEventListener('click', () => {
   headerNav.classList.toggle('header__nav--closed');
+  headerToggle.classList.toggle('header__toggle--closed');
 });

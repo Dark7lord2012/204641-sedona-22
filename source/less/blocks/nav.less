@@ -4,6 +4,10 @@
   list-style: none;
 
   background-color: @pale-blue;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-size: 100% 7px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   outline: 1px solid blue;
 
   @media (min-width: @tablet-width) {
@@ -13,18 +17,23 @@
 
     color: @black;
 
+    background: none;
     background-color: transparent;
   }
 }
 
 .nav__item {
   text-align: center;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+
+  & + .nav__item {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
 
   a {
     display: block;
-    box-sizing: border-box;
-    padding: 10px 20px 5px;
+    // Раньше нижний был 5px, но Pixel Perfect ломает мою логику понимания
+    padding: 10px 20px 4px;
 
     font-size: 18px;
     line-height: 40px;
@@ -33,14 +42,29 @@
 
     text-decoration: none;
     text-transform: uppercase;
+
+    &[href]:hover,
+    &[href]:focus {
+      background-color: @pale-blue-hover;
+    }
+
+    &[href]:focus {
+      background-color: @pale-blue-active;
+      color: rgba(@white, 0.3);
+    }
   }
 
   @media (min-width: @tablet-width) {
+    border: none;
 
     min-width: 153px;
     box-shadow: none;
     outline: 1px solid red;
     outline-offset: -2px;
+
+    & + .nav__item {
+      border: none;
+    }
 
     &:nth-child(4n - 2) {
       margin-right: 78px;
@@ -48,6 +72,7 @@
 
     &:nth-child(4n - 1) {
       margin-left: 78px;
+      transform: translateX(2px); //Pixel Perfect
     }
 
     a {
@@ -56,6 +81,40 @@
       color: @black;
       font-size: 14px;
       line-height: 26px;
+
+      &[href]:hover,
+      &[href]:focus {
+        color: @pale-blue;
+        background-color: transparent;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: @black;
+        background-color: transparent;
+      }
+
+      &:active,
+      &[href]:active {
+        color: rgba(@black, 0.3);
+        background-color: transparent;
+      }
+    }
+
+    &--active {
+      a {
+        color: @brown;
+
+        &:hover,
+        &:focus {
+          color: @brown-hover;
+        }
+
+        &:active {
+          color: rgba(@brown, 0.3);
+        }
+      }
     }
   }
 
