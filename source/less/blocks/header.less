@@ -1,6 +1,5 @@
 .header {
-  outline: 1px solid red;
-  height: 56px; // ?
+  min-height: 56px; // ?
 
   nav {
     position: relative;
@@ -25,7 +24,9 @@
 
 .header__logo {
   width: 101px;
-  height: 84px;
+  // height: 84px;
+  // Нужен другой способ, пока без него логотип голый и без шапки
+  height: 56px;
   outline: 1px solid green;
 
   @media (min-width: @tablet-width) {
@@ -46,7 +47,6 @@
 .header__nav {
   order: -1;
   width: 100%;
-  outline: 2px solid green;
 
   &--closed {
     display: none;
