@@ -1,8 +1,24 @@
 .promo {
-  padding-top: 30px; // картинка сверху по макету
-  padding-bottom: 11px;
+  position: relative;
+
+  padding: 33px 20px 11px;
+  margin-bottom: 19px;
   outline: 1px solid red;
   background-color: @white;
+
+  &::after {
+    position: absolute;
+    bottom: -37px;
+    left: 0;
+    right: 0;
+    height: 37px;
+    content: "";
+
+    background-image: url("/img/promo-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 768px 37px;
+    background-position: center top;
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 50px;
@@ -10,8 +26,8 @@
 }
 
 .promo__slogan {
-  margin: 32px 0 20px; // временно
-  padding: 0 10px; // Понять бы какой отступ по всей ширине у макета
+  margin: 0; // временно
+  padding: 0 4px;
 
   font-size: 18px;
   line-height: 26px;
@@ -29,12 +45,13 @@
 }
 
 .promo__text {
-  margin-bottom: 0;
-  padding: 0 15px; // !
+  margin: 33px 0 0;
+  padding: 0; // !
 
   font-size: 14px;
   line-height: 26px;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 520px;

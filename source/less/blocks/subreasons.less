@@ -1,7 +1,7 @@
 .subreasons {
   box-sizing: border-box;
-  padding: 15px 15px 15px 30px;
-  margin: 0 -14px;
+  padding: 38px 20px 10px;
+  margin: 0 -20px;
   list-style: none;
   background-color: @white;
   color: @black;
@@ -17,9 +17,41 @@
 }
 
 .subreasons__item {
-  margin-bottom: 20px;
+  position: relative;
+
+  margin-bottom: 26px;
+  padding-left: 49px;
   outline: 1px solid red;
   outline-offset: -2px;
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    left: 0px;
+
+    display: flex;
+    width: 40px;
+    height: 40px;
+    content: "";
+    outline: 1px solid red;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--house::before {
+    background-image: url("/img/icon-house.svg");
+  }
+
+  &--souvenirs::before {
+    background-image: url("/img/icon-gift.svg");
+    transform: translateX(1px);
+  }
+
+  &--food::before {
+    background-image: url("/img/icon-burger.svg");
+    transform: translate(-2px, 5px);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 100px 20px 20px;
@@ -39,9 +71,10 @@
 }
 
 .subreasons__text {
-  margin: 0;
+  margin: 16px 0 0;
+
   font-size: 14px;
-  line-height: 26px;
+  line-height: 21px;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
