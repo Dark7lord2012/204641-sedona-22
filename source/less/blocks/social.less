@@ -13,25 +13,34 @@
 .social__item {
   width: 46px;
   height: 48px;
+}
+
+.social__item + .social__item {
+  margin-left: 7px;
+}
+
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
 
   background-color: @pale-blue;
   background-repeat: no-repeat;
   background-position: center;
 
-  &--twitter {
-    background-image: url("/img/icon-twitter.svg");
+  &:hover,
+  &:focus {
+    background-color: @pale-blue-hover;
   }
 
-  &--facebook {
-    background-image: url("/img/icon-facebook.svg");
-    background-position: center calc(50% - 2px); // pixel perfect
-  }
+  &:active {
+    background-color: @pale-blue-active;
 
-  &--youtube {
-    background-image: url("/img/icon-youtube.svg");
+    .social__svg {
+      opacity: 0.3;
+    }
   }
-}
-
-.social__item + .social__item {
-  margin-left: 7px;
 }

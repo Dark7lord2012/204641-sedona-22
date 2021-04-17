@@ -57,6 +57,18 @@
   width: 27px;
   height: 34px;
   margin-left: 12px;
+
+  &:hover,
+  &:focus {
+    .footer__copyright-svg {
+      fill: @pale-blue;
+    }
+  }
+
+  &:active {
+    fill: @black;
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright-svg {

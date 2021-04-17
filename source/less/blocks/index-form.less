@@ -56,6 +56,21 @@
   border: none;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    background-color: @pale-blue-hover;
+  }
+
+  &:active {
+    background-color: @pale-blue-active;
+    color: rgba(@white, 0.3);
+  }
+
+  &[disabled],
+  &:not(a[href]) {
+    background-color: @grey-two;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0 auto;
     width: 458px;
