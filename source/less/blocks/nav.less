@@ -31,7 +31,6 @@
 
   a {
     display: block;
-    // Раньше нижний был 5px, но Pixel Perfect ломает мою логику понимания
     padding: 10px 20px 4px;
 
     font-size: 18px;
@@ -83,6 +82,7 @@
       &[href]:focus {
         color: @pale-blue;
         background-color: transparent;
+        outline: 1px dashed red; // !!!
       }
 
       &:hover,
