@@ -12,10 +12,18 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 35px 120px 36px;
+  }
 }
 
 .footer__social {
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    transform: translateX(-5px); // ?
+  }
 }
 
 .footer__hashtag {
@@ -25,6 +33,10 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__copyright {
@@ -35,6 +47,10 @@
 
   font-size: 14px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 }
 
 .footer__copyright-link {
