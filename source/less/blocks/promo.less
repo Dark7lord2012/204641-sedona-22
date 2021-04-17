@@ -1,16 +1,43 @@
 .promo {
-  padding-top: 300px; // картинка сверху по макету
-  padding-bottom: 11px;
-  outline: 1px solid red;
+  position: relative;
+
+  padding: 33px 20px 11px;
+  margin-bottom: 19px;
+  background-color: @white;
+
+  &::after {
+    position: absolute;
+    bottom: -37px;
+    left: 0;
+    right: 0;
+    height: 37px;
+    content: "";
+
+    background-image: url("/img/promo-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 768px 37px;
+    background-position: center top;
+  }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 50px;
+    padding-top: 44px;
+    padding-bottom: 52px;
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 56px;
+    padding-bottom: 40px;
   }
 }
 
 .promo__slogan {
-  margin: 32px 0 20px; // временно
-  padding: 0 10px; // Понять бы какой отступ по всей ширине у макета
+  margin: 0; // временно
+  padding: 0 4px;
 
   font-size: 18px;
   line-height: 26px;
@@ -28,15 +55,16 @@
 }
 
 .promo__text {
-  margin-bottom: 0;
-  padding: 0 15px; // !
+  margin: 33px 0 0;
+  padding: 0; // !
 
   font-size: 14px;
   line-height: 26px;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 520px;
-    margin: 26px auto 0;
+    margin: 33px auto 0;
   }
 }

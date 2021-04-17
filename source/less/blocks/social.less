@@ -11,11 +11,36 @@
 }
 
 .social__item {
-  width: 47px;
-  height: 47px;
-  background-color: @pale-blue;
+  width: 46px;
+  height: 48px;
 }
 
 .social__item + .social__item {
-  margin-left: 6px;
+  margin-left: 7px;
+}
+
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+
+  background-color: @pale-blue;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &:focus {
+    background-color: @pale-blue-hover;
+  }
+
+  &:active {
+    background-color: @pale-blue-active;
+
+    .social__svg {
+      opacity: 0.3;
+    }
+  }
 }

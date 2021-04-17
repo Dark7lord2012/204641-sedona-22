@@ -1,17 +1,22 @@
 .reason {
-  padding: 40px 14px;
+  padding: 27px 20px;
   box-sizing: border-box;
   text-align: center;
   text-transform: uppercase;
 
   &--imaged {
+    padding-top: 40px;
     padding-bottom: 0;
     background-color: @pale-blue;
     color: @white;
+
+    .reason__text {
+      padding: 0;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    padding: 40px 32px;
+    padding: 42px 32px 40px;
 
     &--imaged {
       display: grid;
@@ -41,27 +46,76 @@
       }
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &:not(.reason--imaged) {
+      padding-bottom: 62px;
+    }
+  }
+}
+
+.reason--imaged-right {
+  padding-top: 53px; // Белая стрелка-треуголник сверху
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .reason__inner {
+      padding-top: 47px; // pixel perfect
+    }
+  }
+}
+
+.reason--imaged-left {
+  .reason__text {
+    margin-bottom: -3px;
+  }
+}
+
+.reason:not(.reason--imaged) + .reason:not(.reason--imaged) {
+  &::before {
+    position: relative;
+    margin-top: -30px;
+    margin-bottom: 25px;
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    content: "";
+    background-color: @grey-five;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .reason__inner {
   @media (min-width: @tablet-width) {
     min-width: 256px;
     box-sizing: border-box;
-    padding: 40px 32px;
-    outline: 1px dotted red;
-    outline-offset: -2px;
+    padding: 42px 32px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 60px 32px;
   }
 }
 
 .reason__title {
   margin-top: 0;
+  margin-bottom: 15px;
 
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 
   &::after {
-    margin-top: 10px;
+    margin-top: 9px;
     display: block;
     counter-increment: reasons;
     content: "— №" counter(reasons) " —";
@@ -69,24 +123,56 @@
     font-size: 14px; // Макет неоднозначно говорит какой размер шрифта(
     line-height: 26px;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+    padding: 0 18px;
+
+    font-size: 21px;
+
+    &::after {
+      margin-top: 12px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 30px;
+  }
 }
 
 .reason__text {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0 15px;
 
   font-size: 14px;
-  line-height: 26px;
+  line-height: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 15px;
+  }
 }
 
 .reason__photo {
   display: block;
-  margin: 0 -14px;
+  margin: 37px -20px 0;
   width: 320px;
   height: 260px;
-  outline: 1px solid red;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     width: 100%;
+    height: 256px;
+  }
+}
+
+.reason__br-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
