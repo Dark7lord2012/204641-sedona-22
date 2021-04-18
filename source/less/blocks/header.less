@@ -1,5 +1,5 @@
 .header {
-  outline: 1px solid red;
+  min-height: 56px; // ?
 
   nav {
     position: relative;
@@ -11,6 +11,8 @@
 }
 
 .header--no-js {
+  height: auto;
+
   .header__toggle {
     display: none;
   }
@@ -22,18 +24,29 @@
 
 .header__logo {
   width: 101px;
-  height: 84px;
+  // height: 84px;
+  // Нужен другой способ, пока без него логотип голый и без шапки
+  height: 56px;
   outline: 1px solid green;
 
   @media (min-width: @tablet-width) {
     position: absolute;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 186px;
+    height: 96px;
+
+    .header__logo-img {
+      display: flex;
+      margin: 0 auto;
+    }
   }
 }
 
 .header__nav {
   order: -1;
   width: 100%;
-  outline: 2px solid green;
 
   &--closed {
     display: none;
@@ -51,20 +64,34 @@
 .header__toggle {
   position: absolute;
   top: 17px;
-  right: 15px;
+  right: 20px;
 
-  width: 22px;
+  width: 23px;
   height: 22px;
   border: none;
+  padding: 0;
 
   background-color: transparent;
+  background-image: url("/img/icon-menu.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  outline: 2px solid green;
   cursor: pointer;
 
   // временно
-  &:hover {
-    background-color: rgba(0, 0, 100, 0.5);
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--closed {
+    width: 22px;
+    background-image: url("/img/icon-cross.svg");
   }
 
   @media (min-width: @tablet-width) {

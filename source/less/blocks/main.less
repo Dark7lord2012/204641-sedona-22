@@ -1,0 +1,82 @@
+.main {
+  padding-top: 158px;
+
+  background-image:
+    url("/img/intro-triangle.svg"),
+    url("/img/text-sedona.svg"),
+    url("/img/back.jpg"); // ну пусть пока будет эта картинка
+  background-position:
+    center 101px,
+    center 51px,
+    center -180px;
+  background-size:
+    1200px 57px,
+    229px 39px,
+    900px auto;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 291px;
+
+    background-position:
+      center 233.5px, // pixel perfect, будь он неладен
+      center 95px,
+      center -228px;
+    background-size:
+      1200px 57px,
+      457px 78px,
+      1200px 518px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 300px;
+
+    background-position:
+      center 243px, // pixel perfect, будь он неладен
+      center 101px,
+      center -218px;
+
+    background-size:
+      1200px 57px,
+      460px 80px,
+      1200px 518px;
+  }
+
+  &--index {
+    padding-top: 389px;
+
+    background-image:
+      url("/img/intro-triangle.svg"),
+      url("/img/text-index.svg"),
+      url("/img/back.jpg"); // ну пусть пока будет эта картинка
+    background-position:
+      center 333px,
+      center 90px,
+      center 0;
+    background-size:
+      1200px 56px,
+      282px 214px,
+      900px auto;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 518px;
+
+      background-position:
+        center 462px,
+        center 77px,
+        center top;
+      background-size:
+        1200px 57px,
+        460px 350px,
+        1200px 518px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-size:
+        1200px 57px,
+        460px 350px,
+        1200px 518px;
+    }
+  }
+}

@@ -1,12 +1,21 @@
 .index-form {
-  padding: 33px 20px 50px;
-  outline: 1px solid black;
+  padding: 33px 20px 59px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
+    padding-bottom: 67px;
+  }
 }
 
 .index-form__title {
   margin-top: 0;
+  margin-bottom: 0;
 
   font-size: 21px;
   line-height: 26px;
@@ -14,24 +23,31 @@
 
   @media (min-width: @tablet-width) {
     width: 435px;
-    margin: 0 auto 30px;
+    margin: 0 auto 34px;
     font-size: 30px;
   }
 }
 
 .index-form__text {
+  margin-top: 21px;
+  margin-bottom: 27px;
+
   font-size: 14px;
-  line-height: 26px;
+  line-height: 24px;
 
   @media (min-width: @tablet-width) {
     width: 435px;
-    margin: 0 auto 40px;
+    margin: 0 auto 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 42px;
   }
 }
 
 .index-form__link {
   display: block;
-  padding: 15px;
+  padding: 16px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -40,8 +56,32 @@
   border: none;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    background-color: @pale-blue-hover;
+  }
+
+  &:active {
+    background-color: @pale-blue-active;
+    color: rgba(@white, 0.3);
+  }
+
+  &[disabled],
+  &:not(a[href]) {
+    background-color: @grey-two;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0 auto;
     width: 458px;
+    box-sizing: border-box;
+  }
+}
+
+.index-form__br-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
