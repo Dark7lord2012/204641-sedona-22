@@ -45,7 +45,7 @@
         <p class="invite__text">
           Помогите нашим отелям стать лучше!
           Оставьте отзыв о них, а также о посещенных вами
-          достопримечательностями
+          достопримечательностях
         </p>
       </section>
 
@@ -81,14 +81,16 @@
               <h3 class="form__legend">Контактная информация:</h3>
 
               <label class="form__label">
-                <span class="form__label-text">Контактный телефон*:</span>
-                <input class="form__input-text"
+                <span class="form__label-text form__label-text--phone">
+                  <span class="form__br-not-desktop">Контактный </span>телефон*:
+                </span>
+                <input class="form__input-text form__input-text--phone"
                   name="Phone" type="tel" placeholder="Введите телефон">
               </label>
 
               <label class="form__label">
-                <span class="form__label-text">Электронная почта*:</span>
-                <input class="form__input-text"
+                <span class="form__label-text form__label-text--email">Электронная почта*:</span>
+                <input class="form__input-text form__input-text--email"
                   name="Email" type="email" placeholder="Введите e-mail">
               </label>
             </fieldset>
@@ -97,15 +99,15 @@
               <h3 class="form__legend">Ваше общее впечатление:</h3>
 
               <label class="form__label">
-                <input type="radio" name="Impression" value="positive" checked>
+                <input class="visually-hidden" type="radio" name="Impression" value="positive" checked>
                 <span class="form__label-text form__label-text--radio">Скорее положительное</span>
               </label>
               <label class="form__label">
-                <input type="radio" name="Impression" value="negative">
+                <input class="visually-hidden" type="radio" name="Impression" value="negative">
                 <span class="form__label-text form__label-text--radio">Скорее отрицательное</span>
               </label>
               <label class="form__label">
-                <input type="radio" name="Impression" value="not answer">
+                <input class="visually-hidden" type="radio" name="Impression" value="not answer">
                 <span class="form__label-text form__label-text--radio">Затрудняюсь ответить</span>
               </label>
             </fieldset>
@@ -113,28 +115,30 @@
             <fieldset class="form__fieldset form__fieldset--showplaces">
               <h3 class="form__legend">Посещенные достопримечательности:</h3>
 
-              <label class="form__label">
-                <input type="checkbox" name="Devils bridge" checked>
-                <span class="form__label-text form__label-text--checkbox">Мост Дъявола</span>
-              </label>
+              <ul class="form__list-checkboxes">
+                <label class="form__label">
+                  <input class="visually-hidden" type="checkbox" name="Devils bridge" checked>
+                  <span class="form__label-text form__label-text--checkbox">Мост Дъявола</span>
+                </label>
 
-              <label class="form__label">
-                <input type="checkbox" name="Bell Mountain" checked>
-                <span class="form__label-text form__label-text--checkbox">Гора-Колокол</span>
-              </label>
+                <label class="form__label">
+                  <input class="visually-hidden" type="checkbox" name="Bell Mountain" checked>
+                  <span class="form__label-text form__label-text--checkbox">Гора-Колокол</span>
+                </label>
 
-              <label class="form__label">
-                <input type="checkbox" name="Slide park" checked>
-                <span class="form__label-text form__label-text--checkbox">Слайд-парк</span>
-              </label>
+                <label class="form__label">
+                  <input class="visually-hidden" type="checkbox" name="Slide park" checked>
+                  <span class="form__label-text form__label-text--checkbox">Слайд-парк</span>
+                </label>
 
-              <label class="form__label">
-                <input type="checkbox" name="Red rocks">
-                <span class="form__label-text form__label-text--checkbox">Красные скалы</span>
-              </label>
+                <label class="form__label">
+                  <input class="visually-hidden" type="checkbox" name="Red rocks">
+                  <span class="form__label-text form__label-text--checkbox">Красные скалы</span>
+                </label>
+              </ul>
             </fieldset>
 
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset form__fieldset--emotions">
               <h3 class="form__legend">Опишите свои эмоции:</h3>
 
               <textarea class="form__textarea" name="Emotions">Опишите подробно все свои восторги</textarea>
