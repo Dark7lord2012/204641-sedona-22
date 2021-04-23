@@ -5,6 +5,14 @@
   text-transform: uppercase;
 
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 113px;
+  }
 }
 
 .invite__title {
@@ -16,7 +24,8 @@
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
-    margin-top: 100px;
+    font-size: 30px;
+    margin-bottom: 33px;
   }
 }
 
