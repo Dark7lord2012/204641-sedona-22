@@ -1,0 +1,147 @@
+.controls {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  height: 66px;
+  margin: 0 20px;
+  padding: 23px;
+  box-sizing: border-box;
+
+  background-color: @grey-three;
+
+  @media (min-width: @tablet-width) {
+    height: 93px;
+    margin: -93px 60px 0;
+    padding-left: 33px;
+    padding-right: 41px;
+
+    background-color: rgba(@black, 0.6);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    padding-right: 43px;
+  }
+}
+
+.controls__volume {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 280px;
+  box-sizing: border-box;
+
+  background-color: rgba(@black, 0.6);
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    flex-grow: 1;
+    background-color: transparent;
+  }
+}
+
+.controls__volume-scale {
+  height: 3px;
+  width: calc(100% - 2 * 23px);
+  margin-top: 1px;
+  background-color: rgba(@white, 0.2);
+
+  @media (min-width: @tablet-width) {
+    width: calc(100% - 2 * 44px);
+  }
+}
+
+.controls__volume-slider {
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  margin-left: 17%;
+
+  background-color: @white;
+  transform: translate(-50%);
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 21.6%;
+  }
+}
+
+.controls__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &--replay {
+    width: 16px;
+    height: 20px;
+    margin-right: auto;
+    transform: translate(2px, -2px);
+  }
+
+  &--subtitles {
+    width: 32px;
+    height: 20px;
+  }
+
+  &--fullscreen {
+    margin-left: 31px;
+  }
+
+  &:hover,
+  &:focus {
+    path {
+      fill: @black-three;
+    }
+  }
+
+  &:active {
+    path {
+      fill: rgba(@black-three, 0.3);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    path {
+      fill: @white;
+    }
+
+    &:hover,
+    &:focus {
+      path {
+        fill: rgba(@white, 0.6);
+      }
+    }
+
+    &:active {
+      path {
+        fill: rgba(@white, 0.3);
+      }
+    }
+
+    &--replay {
+      order: -1;
+      margin-right: 0;
+    }
+  }
+}
