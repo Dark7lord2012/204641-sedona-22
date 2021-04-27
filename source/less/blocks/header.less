@@ -24,10 +24,8 @@
 
 .header__logo {
   width: 101px;
-  // height: 84px;
-  // Нужен другой способ, пока без него логотип голый и без шапки
-  height: 56px;
-  outline: 1px solid green;
+  height: 84px;
+  margin-bottom: -32px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -38,6 +36,8 @@
     height: 96px;
 
     .header__logo-img {
+      width: 186px;
+      height: 96px;
       display: flex;
       margin: 0 auto;
     }

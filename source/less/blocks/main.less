@@ -2,24 +2,31 @@
   padding-top: 157.9px;
 
   background-image:
-    url("/img/intro-triangle.svg"),
-    url("/img/text-sedona.svg"),
-    url("/img/back.jpg"); // ну пусть пока будет эта картинка
+    url("../img/intro-triangle.svg"),
+    url("../img/text-sedona.svg"),
+    url("../img/back-desktop.jpg");
   background-position:
     center 101px,
     center 51px,
-    center -180px;
+    center -231px;
   background-size:
     1200px 57px,
     229px 39px,
-    900px auto;
+    902px auto;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/intro-triangle.svg"),
+      url("../img/text-sedona.svg"),
+      url("../img/back-desktop@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 291px;
 
     background-position:
-      center 233.5px, // pixel perfect, будь он неладен
+      center 233.5px, // pixel perfect
       center 95px,
       center -228px;
     background-size:
@@ -46,9 +53,9 @@
     padding-top: 389px;
 
     background-image:
-      url("/img/intro-triangle.svg"),
-      url("/img/text-index.svg"),
-      url("/img/back.jpg"); // ну пусть пока будет эта картинка
+      url("../img/intro-triangle.svg"),
+      url("../img/text-index.svg"),
+      url("../img/back-mobile.jpg");
     background-position:
       center 333px,
       center 90px,
@@ -56,27 +63,38 @@
     background-size:
       1200px 56px,
       282px 214px,
-      900px auto;
+      320px auto;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/intro-triangle.svg"),
+        url("../img/text-index.svg"),
+        url("../img/back-mobile@2x.jpg");
+    }
 
     @media (min-width: @tablet-width) {
       padding-top: 518px;
 
+      background-image:
+        url("../img/intro-triangle.svg"),
+        url("../img/text-index.svg"),
+        url("../img/back-desktop.jpg");
       background-position:
-        center 462px,
+        center 461.2px, // pixel pefect
         center 77px,
         center top;
       background-size:
         1200px 57px,
         460px 350px,
         1200px 518px;
-    }
 
-    @media (min-width: @desktop-width) {
-      background-size:
-        1200px 57px,
-        460px 350px,
-        1200px 518px;
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/intro-triangle.svg"),
+          url("../img/text-index.svg"),
+          url("../img/back-desktop@2x.jpg");
+      }
     }
   }
 }

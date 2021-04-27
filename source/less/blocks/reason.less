@@ -29,6 +29,10 @@
         grid-column-end: 4;
       }
 
+      .reason__photo {
+        width: 200%;
+      }
+
       &-right {
         .reason__photo {
           grid-column-start: 2;
@@ -38,8 +42,16 @@
 
       &-left {
         .reason__photo {
+          order: -1;
           grid-column-start: 1;
           grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        .reason__inner {
+          grid-column-start: 3;
+          grid-column-end: 4;
           grid-row-start: 1;
           grid-row-end: 2;
         }
@@ -57,11 +69,19 @@
 .reason--imaged-right {
   padding-top: 53px; // Белая стрелка-треуголник сверху
 
+  .reason__text {
+    margin: 0 -10px; // pixel perfect
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
+    .reason__text {
+      margin: 0;
+    }
+
     .reason__inner {
       padding-top: 47px; // pixel perfect
     }
@@ -173,6 +193,14 @@
   display: none;
 
   @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+.reason__br-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
     display: inline;
   }
 }
