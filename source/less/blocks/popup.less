@@ -1,0 +1,136 @@
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 280px;
+  padding: 40px 20px 35px;
+  box-sizing: border-box;
+  background-color: @white;
+  box-shadow: 0 7px 15px rgba(@black-four, 0.15);
+
+  @media (min-width: @tablet-width) {
+    min-height: 347px;
+    padding: 50px 62px;
+    width: 400px;
+  }
+}
+
+.popup__title {
+  margin-top: 0;
+  margin-bottom: 27px;
+
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+  }
+}
+
+.popup__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 21px;
+
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0;
+    margin-bottom: 36px;
+  }
+}
+
+.popup__btn {
+  display: inline-block;
+  align-self: center;
+  min-width: 180px;
+  min-height: 58px;
+  margin-top: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  border: none;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  font-family: inherit;
+  color: @white;
+  text-transform: uppercase;
+
+  background-color: @pale-blue;
+
+  &:hover,
+  &:focus {
+    background-color: @pale-blue-hover;
+  }
+
+  &:active {
+    background-color: @pale-blue-active;
+    color: rgba(@white, 0.3);
+  }
+
+  &:disabled {
+    background-color: @grey-two;
+  }
+
+  &--success {
+    align-self: stretch;
+    // outline: 20px solid @grey-three;
+  }
+
+  &::after {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 98px;
+    content: "";
+    background-color: @grey-three;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    align-self: stretch;
+    margin: auto 2px 0;
+    padding: 15px;
+
+    &--success {
+      margin: auto 0 0;
+      outline: 44px 91px;
+    }
+
+    &::after {
+      height: 146px;
+    }
+  }
+}
+
+.popup--success {
+  padding-bottom: 20px;
+  min-height: 323px;
+
+  .popup__text {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+    min-height: 347px;
+    padding: 47px 90px 44px;
+  }
+}
