@@ -45,7 +45,6 @@
       <h1 class="visually-hidden">Фотографии и видео Sedona</h1>
 
       <section class="photo-n-video">
-        <!-- Дублирование заголовка h1? -->
         <h2 class="photo-n-video__title">Фото и видео</h2>
 
         <p class="photo-n-video__text">
@@ -56,8 +55,15 @@
         <ul class="photo-n-video__photos photos">
           <li class="photos-item photo photo--big">
             <a href="#" class="photo__link" target="_blank">
-              <img class="photo__img" src="https://via.placeholder.com/280"
-                width="280" height="280" alt="Автодорога на закате">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="photo__img"
+                  srcset="img/photo-1-mobile.jpg 1x, img/photo-1-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Автодорога на закате">
+              </picture>
             </a>
             <div class="photo__inner">
               <h3 class="photo__title">Неродные просторы</h3>
@@ -72,8 +78,15 @@
           </li>
           <li class="photos-item photo">
             <a href="#" class="photo__link" target="_blank">
-              <img class="photo__img" src="https://via.placeholder.com/280"
-                width="280" height="280" alt="Кактус с цветком на фоне песчаных гор">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img class="photo__img"
+                  srcset="img/photo-2-mobile.jpg 1x, img/photo-2-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Кактус с цветком на фоне песчаных гор">
+              </picture>
             </a>
             <div class="photo__inner">
               <h3 class="photo__title">Местная растительность</h3>
@@ -88,8 +101,15 @@
           </li>
           <li class="photos-item photo">
             <a href="#" class="photo__link" target="_blank">
-              <img class="photo__img" src="https://via.placeholder.com/280"
-                width="280" height="280" alt="Серпантин на фоне тайги">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="photo__img"
+                  srcset="img/photo-3-mobile.jpg 1x, img/photo-3-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Серпантин на фоне тайги">
+              </picture>
             </a>
             <div class="photo__inner">
               <h3 class="photo__title">Дорога на север</h3>
@@ -104,8 +124,15 @@
           </li>
           <li class="photos-item photo">
             <a href="#" class="photo__link" target="_blank">
-              <img  class="photo__img" src="https://via.placeholder.com/280"
-                width="280" height="280" alt="Песчаная гора в виде моста - Мост Дьявола">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                <img class="photo__img"
+                  srcset="img/photo-4-mobile.jpg 1x, img/photo-4-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Песчаная гора в виде моста - Мост Дьявола">
+              </picture>
             </a>
             <div class="photo__inner">
               <h3 class="photo__title">Мост дьявола</h3>
@@ -130,7 +157,7 @@
         </p>
 
         <video class="photo-n-video__video" src="#"
-          poster="../img/video-mobile.jpg">
+          poster="img/video-desktop.jpg">
         </video>
         <div class="photo-n-video__controls controls">
           <div class="controls__volume">
