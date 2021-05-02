@@ -92,6 +92,10 @@
   background-color: transparent;
   outline: none;
 
+  use {
+    fill: @black-grey;
+  }
+
   &--replay {
     width: 16px;
     height: 20px;
@@ -110,31 +114,31 @@
 
   &:hover,
   &:focus {
-    path {
+    use {
       fill: @black-three;
     }
   }
 
   &:active {
-    path {
+    use {
       fill: rgba(@black-three, 0.3);
     }
   }
 
   @media (min-width: @tablet-width) {
-    path {
+    use {
       fill: @white;
     }
 
     &:hover,
     &:focus {
-      path {
+      use {
         fill: rgba(@white, 0.6);
       }
     }
 
     &:active {
-      path {
+      use {
         fill: rgba(@white, 0.3);
       }
     }
