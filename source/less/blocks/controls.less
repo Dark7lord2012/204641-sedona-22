@@ -92,7 +92,7 @@
   background-color: transparent;
   outline: none;
 
-  use {
+  svg {
     fill: @black-grey;
   }
 
@@ -114,31 +114,31 @@
 
   &:hover,
   &:focus {
-    use {
+    svg {
       fill: @black-three;
     }
   }
 
   &:active {
-    use {
+    svg {
       fill: rgba(@black-three, 0.3);
     }
   }
 
   @media (min-width: @tablet-width) {
-    use {
+    svg {
       fill: @white;
     }
 
     &:hover,
     &:focus {
-      use {
+      svg {
         fill: rgba(@white, 0.6);
       }
     }
 
     &:active {
-      use {
+      svg {
         fill: rgba(@white, 0.3);
       }
     }
