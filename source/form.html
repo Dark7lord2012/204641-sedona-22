@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Седона - Форма Отзыва</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="fonts/ptsans.woff2" as="font">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon-32.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
   </head>
@@ -41,7 +41,7 @@
       </nav>
     </header>
 
-    <main class="page__main main">
+    <main class="main">
       <h1 class="visually-hidden">Форма отзыва Sedona</h1>
 
       <section class="invite">
@@ -89,7 +89,7 @@
 
               <label class="form__label">
                 <span class="form__label-text form__label-text--phone">
-                  <span class="form__br-not-desktop">Контактный </span>телефон*:
+                  <span class="form__br-not-desktop">Контактный&thinsp;</span>телефон*:
                 </span>
                 <input class="form__input-text form__input-text--phone"
                   name="Phone" type="tel" placeholder="Введите телефон">
@@ -122,7 +122,7 @@
             <fieldset class="form__fieldset form__fieldset--showplaces">
               <h3 class="form__legend">Посещенные достопримечательности:</h3>
 
-              <ul class="form__list-checkboxes">
+              <div class="form__list-checkboxes">
                 <label class="form__label">
                   <input class="visually-hidden" type="checkbox" name="Devils bridge" checked>
                   <span class="form__label-text form__label-text--checkbox">Мост Дъявола</span>
@@ -142,7 +142,7 @@
                   <input class="visually-hidden" type="checkbox" name="Red rocks">
                   <span class="form__label-text form__label-text--checkbox">Красные скалы</span>
                 </label>
-              </ul>
+              </div>
             </fieldset>
 
             <fieldset class="form__fieldset form__fieldset--emotions">
@@ -224,7 +224,6 @@
       </p>
     </footer>
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b7ea113c-64a5-4a83-9b36-6cc6e400c461"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

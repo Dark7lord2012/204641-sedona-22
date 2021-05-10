@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Седона - Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="fonts/ptsans.woff2" as="font">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon-32.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
   </head>
@@ -41,7 +41,7 @@
       </nav>
     </header>
 
-    <main class="page__main main main--index">
+    <main class="main main--index">
       <h1 class="visually-hidden">Главная страница Sedona</h1>
 
       <section class="promo">
@@ -62,7 +62,10 @@
           <li class="reasons__list-item reason reason--imaged reason--imaged-right">
             <div class="reason__inner">
               <h3 class="reason__title">
-                Настоящий<br class="reason__br-desktop"> городок
+                Настоящий
+                <br class="reason__br-desktop">
+                <span class="reason__space"></span>
+                городок
               </h3>
               <p class="reason__text">
                 Седона не аттракцион для туристов, там течет своя жизнь
@@ -91,11 +94,10 @@
                 srcset=
                   "img/photo-city-tablet.jpg 1x,
                   img/photo-city-tablet@2x.jpg 2x">
-              <img  class="reason__photo"
+              <img class="reason__photo"
                 width="320" height="260" alt="Дом в Седоне"
-                srcset=
-                  "img/photo-city.jpg 1x,
-                  img/photo-city@2x.jpg 2x">
+                src="img/photo-city.jpg"
+                srcset="img/photo-city@2x.jpg 2x">
             </picture>
 
             <ul class="reasons__sublist reason__sublist subreasons">
@@ -108,7 +110,9 @@
               <li class="subreasons__item subreasons__item--souvenirs">
                 <h4 class="subreasons__title">Сувениры</h4>
                 <p class="subreasons__text">
-                  Не только китайского, <br class="subreasons__br-desktop">
+                  Не только китайского,
+                  <br class="subreasons__br-desktop">
+                  <span class="reason__space"></span>
                   но и местного производства!
                 </p>
               </li>
@@ -117,6 +121,7 @@
                 <p class="subreasons__text">
                   Всегда заказывайте фирменный бургер,
                   <br class="subreasons__br-tablet">
+                  <span class="reason__space"></span>
                   вы не разочаруетесь!
                 </p>
               </li>
@@ -125,10 +130,16 @@
           </li>
           <li class="reasons__list-item reason reason--imaged reason--imaged-left">
             <div class="reason__inner">
-              <h3 class="reason__title">Там есть <br class="reason__br-tablet">мост дьявола</h3>
+              <h3 class="reason__title">
+                Там есть
+                <br class="reason__br-tablet">
+                <span class="reason__space"></span>
+                мост дьявола
+              </h3>
               <p class="reason__text">
                 Да, по нему можно пройти!
                 <br class="reason__br-desktop">
+                <span class="reason__space"></span>
                 Если вы осмелитесь, конечно
               </p>
             </div>
@@ -154,16 +165,18 @@
                 srcset=
                   "img/photo-bridge-tablet.jpg 1x,
                   img/photo-bridge-tablet@2x.jpg 2x">
-              <img  class="reason__photo"
+              <img class="reason__photo"
                 width="320" height="260" alt="Дом в Седоне"
-                srcset=
-                  "img/photo-bridge.jpg 1x,
-                  img/photo-bridge@2x.jpg 2x">
+                src="img/photo-bridge.jpg"
+                srcset="img/photo-bridge@2x.jpg 2x">
             </picture>
           </li>
           <li class="reasons__list-item reason">
             <h3 class="reason__title">
-              Небольшая <br class="reason__br-desktop">площадь
+              Небольшая
+              <br class="reason__br-desktop">
+              <span class="reason__space"></span>
+              площадь
             </h3>
             <p class="reason__text">
               Все интересные места находятся очень близко
@@ -171,11 +184,15 @@
           </li>
           <li class="reasons__list-item reason">
             <h3 class="reason__title">
-              Красивая <br class="reason__br-desktop">дорога
+              Красивая
+              <br class="reason__br-desktop">
+              <span class="reason__space"></span>
+              дорога
             </h3>
             <p class="reason__text">
               Ехать в Седону из Лас‑Вегаса совсем
               <br class="reason__br-tablet">
+              <span class="reason__space"></span>
               не скучно!
             </p>
           </li>
@@ -183,6 +200,7 @@
             <h3 class="reason__title">
               Мало
               <br class="reason__br-desktop">
+              <span class="reason__space"></span>
               туристов
             </h3>
             <p class="reason__text">
@@ -196,7 +214,10 @@
         <h2 class="index-form__title">Заинтересовались?</h2>
 
         <p class="index-form__text">
-          Укажите предполагаемые даты поездки, <br class="index-form__br-tablet"> и мы покажем вам лучшие предложения гостиниц в Седоне
+          Укажите предполагаемые даты поездки,
+          <br class="index-form__br-tablet">
+          <span class="index-form__space"></span>
+          и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
 
         <a class="index-form__link" href="#">Найти гостиницу</a>
@@ -253,6 +274,6 @@
     </footer>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b7ea113c-64a5-4a83-9b36-6cc6e400c461"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
