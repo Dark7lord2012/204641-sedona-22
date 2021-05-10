@@ -42,6 +42,4 @@ if (document.querySelector('#map')) {
     myMap.behaviors.disable('scrollZoom'); // Убрать прокрутку карты колесиком мыши
     myMap.controls.remove('searchControl'); // Удалил поисковую строку
   });
-
 }
-
